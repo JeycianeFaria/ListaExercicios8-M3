@@ -33,4 +33,14 @@ public class Imobiliaria {
         this.catalogoImoveis = catalogoImoveis;
     }
 
+
+    //Métodos
+    @Override
+    public String toString() {
+        StringBuilder exibir = new StringBuilder();
+        exibir.append("\n======" + nomeImobiliaria + "======");
+        exibir.append("\n======Catálogo======" + catalogoImoveis);
+        return exibir.toString();
+    }
+
 }
