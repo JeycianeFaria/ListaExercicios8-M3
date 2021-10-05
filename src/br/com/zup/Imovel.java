@@ -71,6 +71,7 @@ public class Imovel {
         exibir.append("\nEndereço: " + endereco);
         exibir.append("\nValor do Aluguel: " + valorAluguel);
         exibir.append("\nFuncionário Responsável: " + funcionarioResponsavel);
+        exibir.append("\nQuantidade de moradores: " + moradores.size());
         exibir.append("\n======Moradores======" + moradores);
         return exibir.toString();
     }
