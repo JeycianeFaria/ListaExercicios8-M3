@@ -23,4 +23,14 @@ public class Morador extends Pessoa {
     }
 
 
+    //Métodoa
+    @Override
+    public String toString() {
+        StringBuilder exibir = new StringBuilder();
+        exibir.append(super.toString());
+        exibir.append("\nRenda mensal: R$ " + rendaMensal);
+        exibir.append("\n=====================");
+        return exibir.toString();
+    }
+
 }

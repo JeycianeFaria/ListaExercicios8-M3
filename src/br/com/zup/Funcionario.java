@@ -22,4 +22,16 @@ public class Funcionario extends Pessoa{
         this.salario = salario;
     }
 
+
+    //Métodos
+    @Override
+    public String toString() {
+        StringBuilder exibir = new StringBuilder();
+        exibir.append("\n======Corretor======");
+        exibir.append(super.toString());
+        exibir.append("\nSalário: R$ " + salario);
+        exibir.append("\n=====================");
+        return exibir.toString();
+    }
+
 }

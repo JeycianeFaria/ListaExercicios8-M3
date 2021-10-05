@@ -31,4 +31,14 @@ public abstract  class Pessoa {
         this.cpf = cpf;
     }
 
+
+    //Métodos
+    @Override
+    public String toString() {
+        StringBuilder exibir = new StringBuilder();
+        exibir.append("\nNome: " + nome);
+        exibir.append("\nCpf: " + cpf);
+        return exibir.toString();
+    }
+
 }
