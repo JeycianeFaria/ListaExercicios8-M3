@@ -58,12 +58,12 @@ public class Imovel {
         return moradores;
     }
 
-    public void setMoradores(List<Morador> moradores) {
-        this.moradores = moradores;
-    }
-
 
     //Métodos
+    public void adicionarMoradores(Morador morador){
+        moradores.add(morador);
+    }
+
     @Override
     public String toString() {
         StringBuilder exibir = new StringBuilder();
