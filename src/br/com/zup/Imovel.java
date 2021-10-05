@@ -62,4 +62,17 @@ public class Imovel {
         this.moradores = moradores;
     }
 
+
+    //Métodos
+    @Override
+    public String toString() {
+        StringBuilder exibir = new StringBuilder();
+        exibir.append("\n======" + tituloImovel + "======");
+        exibir.append("\nEndereço: " + endereco);
+        exibir.append("\nValor do Aluguel: " + valorAluguel);
+        exibir.append("\nFuncionário Responsável: " + funcionarioResponsavel);
+        exibir.append("\n======Moradores======" + moradores);
+        return exibir.toString();
+    }
+
 }
