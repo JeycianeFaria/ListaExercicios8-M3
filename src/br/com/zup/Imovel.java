@@ -56,19 +56,24 @@ public class Imovel {
 
 
     //Métodos
-    public void adicionarMorador(Morador morador) {
+    public boolean verificaCpfMorador(Morador morador){
 
         boolean cpfExistente = false;
 
         for (Morador referencia : moradores) {
             if (referencia.getCpf().equals(morador.getCpf())) {
                 cpfExistente = true;
-            } else {
-                cpfExistente = false;
+                break;
             }
         }
 
-        if (cpfExistente) {
+        return cpfExistente;
+
+    }
+
+    public void adicionarMorador(Morador morador) {
+
+        if (verificaCpfMorador(morador)) {
             System.out.println("Morador com este cpf já cadastrado.Digite novamente!");
         } else {
             moradores.add(morador);
