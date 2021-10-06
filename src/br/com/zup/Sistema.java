@@ -81,7 +81,7 @@ public class Sistema {
 
     public static Imovel adicionarMoradoresImovel(Imovel imovel){
         int qtdMoradores = capturarDados("Digite a quantidade de moradores que deseja cadastrar: ").nextInt();
-        for (int contador = 0;contador <qtdMoradores; contador++){
+        for (int contador = 1;contador <= qtdMoradores; contador++){
             System.out.println(contador + "º morador:");
             Morador morador = cadastrarMoradores();
             imovel.adicionarMorador(morador);
@@ -112,7 +112,7 @@ public class Sistema {
 
             }else if (opcaoSelecionada == 2){
                 //exibir cátalogo de imóveis
-
+                imobiliaria.exibirImoveis();
 
             }else if(opcaoSelecionada == 3){
                 //sair

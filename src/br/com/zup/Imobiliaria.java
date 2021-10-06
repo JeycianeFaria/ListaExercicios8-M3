@@ -25,14 +25,19 @@ public class Imobiliaria {
         this.nomeImobiliaria = nomeImobiliaria;
     }
 
-    public List<Imovel> getCatalogoImoveis() {
-        return catalogoImoveis;
-    }
 
 
     //Métodos
     public void adicionarImoveis(Imovel imovel){
         catalogoImoveis.add(imovel);
+    }
+
+    public List<Imovel> exibirImoveis(){
+        for (Imovel referencia : catalogoImoveis){
+            System.out.println(referencia);
+        }
+
+        return  catalogoImoveis;
     }
 
     @Override
