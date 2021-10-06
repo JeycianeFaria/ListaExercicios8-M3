@@ -40,6 +40,18 @@ public class Imobiliaria {
         return  catalogoImoveis;
     }
 
+    public Imovel exibirImovelEspecifico(String enderecoImovel){
+        Imovel imovelEspecifico = null;
+        for (Imovel referencia : catalogoImoveis){
+            if (referencia.getEndereco().equals(enderecoImovel)){
+                imovelEspecifico = referencia;
+            }
+        }
+
+        return imovelEspecifico;
+    }
+
+
     @Override
     public String toString() {
         StringBuilder exibir = new StringBuilder();

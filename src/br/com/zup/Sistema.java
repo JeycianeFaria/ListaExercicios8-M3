@@ -15,7 +15,8 @@ public class Sistema {
         System.out.println("\n======Bem vindo======");
         System.out.println("Digite 1 - para cadastrar um imóvel.");
         System.out.println("Digite 2 - para exibir o cátalogo de imóveis.");
-        System.out.println("Digite 3 - para sair.");
+        System.out.println("Digite 3 - para remover um morador de um imóvel.");
+        System.out.println("Digite 4 - para sair.");
     }
 
     //receber dados do usuario
@@ -92,6 +93,8 @@ public class Sistema {
     }
 
 
+
+
     public static void executar(){
 
         Imobiliaria imobiliaria = new Imobiliaria("Imobolote");
@@ -115,7 +118,12 @@ public class Sistema {
                 //exibir cátalogo de imóveis
                 imobiliaria.exibirImoveis();
 
-            }else if(opcaoSelecionada == 3){
+            }else if (opcaoSelecionada == 3){
+                //remover morador
+                Imovel imovel = imobiliaria.exibirImovelEspecifico(capturarDados("Digite o endereço do imóvel que deseja excluir um morador: ").nextLine());
+                System.out.println("O imovél encontrado foi : \n" + imovel);
+
+            } else if(opcaoSelecionada == 4){
                 //sair
                 exibirMenu = false;
                 System.out.println("\nAté a proxima!");
