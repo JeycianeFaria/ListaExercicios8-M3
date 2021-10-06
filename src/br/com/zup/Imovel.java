@@ -82,6 +82,19 @@ public class Imovel {
     }
 
 
+    public void removerMorador(String pegarCPF) {
+        Morador moradorARemover = null;
+
+        for (Morador referencia : moradores) {
+            if (referencia.getCpf().equals(pegarCPF)) {
+                moradorARemover = referencia;
+            }
+        }
+        moradores.remove(moradorARemover);
+        System.out.println("Morador removido com sucesso!");
+
+    }
+
 
     @Override
     public String toString() {

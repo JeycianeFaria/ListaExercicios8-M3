@@ -82,12 +82,16 @@ public class Sistema {
 
     public static Imovel adicionarMoradoresImovel(Imovel imovel){
         int qtdMoradores = capturarDados("Digite a quantidade de moradores que deseja cadastrar: ").nextInt();
-        Morador morador = new Morador();
-        for (int contador = 1;contador <= qtdMoradores; contador++){
-            System.out.println(contador + "º morador:");
-            morador = cadastrarMoradores();
-            imovel.adicionarMorador(morador);
+        int contador = 1;
+
+        while (imovel.getMoradores().size() < qtdMoradores){
+
+                System.out.println("\nCadastre o " + contador + "º morador:");
+                Morador morador = cadastrarMoradores();
+                imovel.adicionarMorador(morador);
+                contador ++;
         }
+
 
         return imovel;
     }
@@ -121,7 +125,9 @@ public class Sistema {
             }else if (opcaoSelecionada == 3){
                 //remover morador
                 Imovel imovel = imobiliaria.exibirImovelEspecifico(capturarDados("Digite o endereço do imóvel que deseja excluir um morador: ").nextLine());
-                System.out.println("O imovél encontrado foi : \n" + imovel);
+                System.out.println("\nO imovél encontrado foi:" + imovel);
+                imovel.removerMorador(capturarDados("Digite o cpf do morador que deseja remover: ").nextLine());
+                System.out.println("\nOs dados atualizados do imovél é: " + imovel);
 
             } else if(opcaoSelecionada == 4){
                 //sair
