@@ -56,7 +56,7 @@ public class Imovel {
 
 
     //Métodos
-    public void adicionarMoradores(Morador morador){
+    public void adicionarMorador(Morador morador){
         moradores.add(morador);
     }
 

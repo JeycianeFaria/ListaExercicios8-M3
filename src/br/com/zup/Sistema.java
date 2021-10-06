@@ -74,10 +74,22 @@ public class Sistema {
         return funcionario;
     }
 
-    public static Morador cadastrarMorador(){
+    public static Morador cadastrarMoradores(){
         Morador morador = new Morador(nomeMorador(),cpfMorador(),rendaMensalMorador());
         return morador;
     }
+
+    public static Imovel adicionarMoradoresImovel(Imovel imovel){
+        int qtdMoradores = capturarDados("Digite a quantidade de moradores que deseja cadastrar: ").nextInt();
+        for (int contador = 0;contador <qtdMoradores; contador++){
+            System.out.println(contador + "º morador:");
+            Morador morador = cadastrarMoradores();
+            imovel.adicionarMorador(morador);
+        }
+
+        return imovel;
+    }
+
 
     public static void executar(){
 
@@ -93,6 +105,10 @@ public class Sistema {
 
             if (opcaoSelecionada == 1){
                 //cadastrar um imóvel
+                Imovel imovel = cadastrarImovel();
+                imovel.adicionarFuncionarioResponsavel(cadastrarFuncionario());
+                adicionarMoradoresImovel(imovel);
+                imobiliaria.adicionarImoveis(imovel);
 
             }else if (opcaoSelecionada == 2){
                 //exibir cátalogo de imóveis
