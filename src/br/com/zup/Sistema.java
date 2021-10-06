@@ -33,6 +33,21 @@ public class Sistema {
         return valorAluguel;
     }
 
+    public static String nomeFuncionario(){
+        String nomeFuncionario = capturarDados("Digite o nome do Funcionário responsável: ").nextLine();
+        return nomeFuncionario;
+    }
+
+    public static String cpfFuncionario(){
+        String cpfFuncionario = capturarDados("Digite o cpf do Funcionário responsável: ").nextLine();
+        return cpfFuncionario;
+    }
+
+    public static double salarioFuncionario(){
+        double salario = capturarDados("Digite o sálario do Funcionário responsável: ").nextInt();
+        return salario;
+    }
+
 
     public static void executar(){
 
