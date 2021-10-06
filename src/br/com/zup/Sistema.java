@@ -65,20 +65,12 @@ public class Sistema {
     }
 
     public static Imovel cadastrarImovel(){
-        Imovel imovel = new Imovel();
-        imovel.setTituloImovel(tituloDoImovel());
-        imovel.setEndereco(enderecoImovel());
-        imovel.setValorAluguel(valorAluguelImovel());
-
+        Imovel imovel = new Imovel(tituloDoImovel(),enderecoImovel(),valorAluguelImovel());
         return imovel;
     }
 
     public static Funcionario cadastrarFuncionario(){
-        Funcionario funcionario = new Funcionario();
-        funcionario.setNome(nomeFuncionario());
-        funcionario.setCpf(cpfFuncionario());
-        funcionario.setSalario(salarioFuncionario());
-
+        Funcionario funcionario = new Funcionario(nomeFuncionario(),cpfFuncionario(),salarioFuncionario());
         return funcionario;
     }
 
