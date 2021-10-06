@@ -81,9 +81,10 @@ public class Sistema {
 
     public static Imovel adicionarMoradoresImovel(Imovel imovel){
         int qtdMoradores = capturarDados("Digite a quantidade de moradores que deseja cadastrar: ").nextInt();
+        Morador morador = new Morador();
         for (int contador = 1;contador <= qtdMoradores; contador++){
             System.out.println(contador + "º morador:");
-            Morador morador = cadastrarMoradores();
+            morador = cadastrarMoradores();
             imovel.adicionarMorador(morador);
         }
 

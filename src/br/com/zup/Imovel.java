@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Imovel {
 
-    private  String tituloImovel;
+    private String tituloImovel;
     private String endereco;
     private double valorAluguel;
     private Funcionario funcionarioResponsavel;
@@ -56,11 +56,28 @@ public class Imovel {
 
 
     //Métodos
-    public void adicionarMorador(Morador morador){
-        moradores.add(morador);
+    public void adicionarMorador(Morador morador) {
+
+        boolean cpfExistente = false;
+
+        for (Morador referencia : moradores) {
+            if (referencia.getCpf().equals(morador.getCpf())) {
+                cpfExistente = true;
+            } else {
+                cpfExistente = false;
+            }
+        }
+
+        if (cpfExistente) {
+            System.out.println("Morador com este cpf já cadastrado.Digite novamente!");
+        } else {
+            moradores.add(morador);
+            System.out.println("Morador adicionado com sucesso!");
+        }
+
     }
 
-    public void adicionarFuncionarioResponsavel(Funcionario funcionarioResponsavel){
+    public void adicionarFuncionarioResponsavel(Funcionario funcionarioResponsavel) {
         this.funcionarioResponsavel = funcionarioResponsavel;
     }
 
