@@ -18,6 +18,7 @@ public class Sistema {
         System.out.println("Digite 3 - para sair.");
     }
 
+    //receber dados do usuario
     public static String tituloDoImovel(){
         String titulo = capturarDados("Digite o título do Imóvel: ").nextLine();
         return titulo;
@@ -61,6 +62,15 @@ public class Sistema {
     public static double rendaMensalMorador(){
         double rendaMensal = capturarDados("Digite a renda mensal do Morador: ").nextInt();
         return rendaMensal;
+    }
+
+    public static Imovel cadastrarImovel(){
+        Imovel imovel = new Imovel();
+        imovel.setTituloImovel(tituloDoImovel());
+        imovel.setEndereco(enderecoImovel());
+        imovel.setValorAluguel(valorAluguelImovel());
+
+        return imovel;
     }
 
 
