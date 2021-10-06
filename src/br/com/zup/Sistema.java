@@ -73,6 +73,15 @@ public class Sistema {
         return imovel;
     }
 
+    public static Funcionario cadastrarFuncionario(){
+        Funcionario funcionario = new Funcionario();
+        funcionario.setNome(nomeFuncionario());
+        funcionario.setCpf(cpfFuncionario());
+        funcionario.setSalario(salarioFuncionario());
+
+        return funcionario;
+    }
+
 
     public static void executar(){
 
