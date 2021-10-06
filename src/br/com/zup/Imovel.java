@@ -71,13 +71,33 @@ public class Imovel {
 
     }
 
+    public boolean verificarEmailMorador(Morador morador){
+        boolean emailValido = true;
 
+        if (!morador.getEmail().contains("@")){
+            emailValido = false;
+        }
+
+        for(Morador referencia: moradores){
+            if (referencia.getEmail().equals(morador.getEmail())){
+                emailValido = false;
+                break;
+            }
+        }
+
+
+        return emailValido;
+
+    }
 
     public void adicionarMorador(Morador morador) {
 
         if (verificaCpfMorador(morador)) {
             System.out.println("Morador com este cpf já cadastrado.Digite novamente!");
-        } else {
+        }else if (!verificarEmailMorador(morador)){
+            System.out.println("Email digitado inválido ou já cadastrado.Digite novamente!");
+        }
+        else {
             moradores.add(morador);
             System.out.println("Morador adicionado com sucesso!");
         }

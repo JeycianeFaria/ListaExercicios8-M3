@@ -32,12 +32,13 @@ public class Morador extends Pessoa {
         this.email = email;
     }
 
-    //Métodoa
+    //Métodos
     @Override
     public String toString() {
         StringBuilder exibir = new StringBuilder();
         exibir.append(super.toString());
         exibir.append("\nRenda mensal: R$ " + rendaMensal);
+        exibir.append("\nEmail: " + email);
         exibir.append("\n=====================");
         return exibir.toString();
     }
