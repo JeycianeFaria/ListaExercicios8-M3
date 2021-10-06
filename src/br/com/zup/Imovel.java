@@ -50,10 +50,6 @@ public class Imovel {
         return funcionarioResponsavel;
     }
 
-    public void setFuncionarioResponsavel(Funcionario funcionarioResponsavel) {
-        this.funcionarioResponsavel = funcionarioResponsavel;
-    }
-
     public List<Morador> getMoradores() {
         return moradores;
     }
@@ -62,6 +58,10 @@ public class Imovel {
     //Métodos
     public void adicionarMoradores(Morador morador){
         moradores.add(morador);
+    }
+
+    public void adicionarFuncionarioResponsavel(Funcionario funcionarioResponsavel){
+        this.funcionarioResponsavel = funcionarioResponsavel;
     }
 
 
