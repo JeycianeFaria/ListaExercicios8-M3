@@ -3,14 +3,16 @@ package br.com.zup;
 public class Morador extends Pessoa {
 
     private double rendaMensal;
+    private String email;
 
 
     public Morador() {
     }
 
-    public Morador(String nome, String cpf, double rendaMensal) {
+    public Morador(String nome, String cpf, double rendaMensal, String email) {
         super(nome, cpf);
         this.rendaMensal = rendaMensal;
+        this.email = email;
     }
 
 
@@ -22,6 +24,13 @@ public class Morador extends Pessoa {
         this.rendaMensal = rendaMensal;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     //Métodoa
     @Override

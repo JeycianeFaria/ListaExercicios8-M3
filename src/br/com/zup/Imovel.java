@@ -71,6 +71,8 @@ public class Imovel {
 
     }
 
+
+
     public void adicionarMorador(Morador morador) {
 
         if (verificaCpfMorador(morador)) {

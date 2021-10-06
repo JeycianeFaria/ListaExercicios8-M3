@@ -65,6 +65,11 @@ public class Sistema {
         return rendaMensal;
     }
 
+    public static String emailMorador(){
+        String email = capturarDados("Digite o email do Morador: ").nextLine();
+        return email;
+    }
+
     public static Imovel cadastrarImovel(){
         Imovel imovel = new Imovel(tituloDoImovel(),enderecoImovel(),valorAluguelImovel());
         return imovel;
@@ -76,7 +81,7 @@ public class Sistema {
     }
 
     public static Morador cadastrarMoradores(){
-        Morador morador = new Morador(nomeMorador(),cpfMorador(),rendaMensalMorador());
+        Morador morador = new Morador(nomeMorador(),cpfMorador(),rendaMensalMorador(), emailMorador());
         return morador;
     }
 
