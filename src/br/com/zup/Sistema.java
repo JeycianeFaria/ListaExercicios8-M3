@@ -82,6 +82,10 @@ public class Sistema {
         return funcionario;
     }
 
+    public static Morador cadastrarMorador(){
+        Morador morador = new Morador(nomeMorador(),cpfMorador(),rendaMensalMorador());
+        return morador;
+    }
 
     public static void executar(){
 
@@ -97,7 +101,6 @@ public class Sistema {
 
             if (opcaoSelecionada == 1){
                 //cadastrar um imóvel
-
 
             }else if (opcaoSelecionada == 2){
                 //exibir cátalogo de imóveis
