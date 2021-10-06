@@ -18,6 +18,21 @@ public class Sistema {
         System.out.println("Digite 3 - para sair.");
     }
 
+    public static String tituloDoImovel(){
+        String titulo = capturarDados("Digite o título do Imóvel: ").nextLine();
+        return titulo;
+    }
+
+    public static String enderecoImovel(){
+        String endereco = capturarDados("Digite o endereço do Imóvel: ").nextLine();
+        return endereco;
+    }
+
+    public static double valorAluguelImovel(){
+        double valorAluguel = capturarDados("Digite o valor do aluguel do imóvel: ").nextInt();
+        return valorAluguel;
+    }
+
 
     public static void executar(){
 
@@ -33,19 +48,21 @@ public class Sistema {
 
             if (opcaoSelecionada == 1){
                 //cadastrar um imóvel
+
+
             }else if (opcaoSelecionada == 2){
                 //exibir cátalogo de imóveis
+
+
             }else if(opcaoSelecionada == 3){
                 //sair
                 exibirMenu = false;
                 System.out.println("\nAté a proxima!");
+
             }else{
                 System.out.println("\nA opção selecionada é inválida, digite novamente!");
             }
 
-            /* System.out.println("\nDigite 1 - para cadastrar um imóvel.");
-        System.out.println("\nDigite 2 - para exibir o cátalogo de imóveis.");
-        System.out.println("\nDigite 3 - para sair.");*/
         }
 
 
