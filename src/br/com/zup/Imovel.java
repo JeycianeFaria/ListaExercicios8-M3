@@ -56,7 +56,7 @@ public class Imovel {
 
 
     //Métodos
-    public boolean verificaCpfMorador(Morador morador){
+    public boolean verificaCpfMorador(Morador morador) {
 
         boolean cpfExistente = false;
 
@@ -68,48 +68,41 @@ public class Imovel {
         }
 
         return cpfExistente;
-
     }
 
-    public boolean verificarEmailMorador(Morador morador){
+    public boolean verificarEmailMorador(Morador morador) {
+
         boolean emailValido = true;
 
-        if (!morador.getEmail().contains("@")){
+        if (!morador.getEmail().contains("@")) {
             emailValido = false;
         }
 
-        for(Morador referencia: moradores){
-            if (referencia.getEmail().equals(morador.getEmail())){
+        for (Morador referencia : moradores) {
+            if (referencia.getEmail().equals(morador.getEmail())) {
                 emailValido = false;
                 break;
             }
         }
 
-
         return emailValido;
-
     }
 
     public void adicionarMorador(Morador morador) {
 
         if (verificaCpfMorador(morador)) {
             System.out.println("Morador com este cpf já cadastrado.Digite novamente!");
-        }else if (!verificarEmailMorador(morador)){
+        } else if (!verificarEmailMorador(morador)) {
             System.out.println("Email digitado inválido ou já cadastrado.Digite novamente!");
-        }
-        else {
+        } else {
             moradores.add(morador);
             System.out.println("Morador adicionado com sucesso!");
         }
 
     }
 
-    public void adicionarFuncionarioResponsavel(Funcionario funcionarioResponsavel) {
-        this.funcionarioResponsavel = funcionarioResponsavel;
-    }
-
-
     public void removerMorador(String pegarCPF) {
+
         Morador moradorARemover = null;
 
         for (Morador referencia : moradores) {
@@ -117,9 +110,14 @@ public class Imovel {
                 moradorARemover = referencia;
             }
         }
+
         moradores.remove(moradorARemover);
         System.out.println("Morador removido com sucesso!");
 
+    }
+
+    public void adicionarFuncionarioResponsavel(Funcionario funcionarioResponsavel) {
+        this.funcionarioResponsavel = funcionarioResponsavel;
     }
 
 

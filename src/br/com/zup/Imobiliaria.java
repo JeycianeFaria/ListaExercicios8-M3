@@ -26,7 +26,6 @@ public class Imobiliaria {
     }
 
 
-
     //Métodos
     public void adicionarImoveis(Imovel imovel){
         catalogoImoveis.add(imovel);
@@ -41,7 +40,9 @@ public class Imobiliaria {
     }
 
     public Imovel exibirImovelEspecifico(String enderecoImovel){
+
         Imovel imovelEspecifico = null;
+
         for (Imovel referencia : catalogoImoveis){
             if (referencia.getEndereco().equals(enderecoImovel)){
                 imovelEspecifico = referencia;

@@ -4,12 +4,10 @@ import java.util.Scanner;
 
 public class Sistema {
 
-
     public static Scanner capturarDados(String mensagem){
         System.out.println(mensagem);
         return new Scanner(System.in);
     }
-
 
     public static void menu(){
         System.out.println("\n======Bem vindo======");
@@ -18,6 +16,7 @@ public class Sistema {
         System.out.println("Digite 3 - para remover um morador de um imóvel.");
         System.out.println("Digite 4 - para sair.");
     }
+
 
     //receber dados do usuario
     public static String tituloDoImovel(){
@@ -70,6 +69,7 @@ public class Sistema {
         return email;
     }
 
+    //Métodos para realizar cadastro
     public static Imovel cadastrarImovel(){
         Imovel imovel = new Imovel(tituloDoImovel(),enderecoImovel(),valorAluguelImovel());
         return imovel;
@@ -86,8 +86,8 @@ public class Sistema {
     }
 
     public static Imovel adicionarMoradoresImovel(Imovel imovel){
-        int qtdMoradores = capturarDados("Digite a quantidade de moradores que deseja cadastrar: ").nextInt();
 
+        int qtdMoradores = capturarDados("Digite a quantidade de moradores que deseja cadastrar: ").nextInt();
 
         while (imovel.getMoradores().size() < qtdMoradores){
                 int contador = imovel.getMoradores().size() + 1;
@@ -98,13 +98,11 @@ public class Sistema {
 
         }
 
-
         return imovel;
     }
 
 
-
-
+    //Método para executar
     public static void executar(){
 
         Imobiliaria imobiliaria = new Imobiliaria("Imobolote");
@@ -133,7 +131,7 @@ public class Sistema {
                 Imovel imovel = imobiliaria.exibirImovelEspecifico(capturarDados("Digite o endereço do imóvel que deseja excluir um morador: ").nextLine());
                 System.out.println("\nO imovél encontrado foi:" + imovel);
                 imovel.removerMorador(capturarDados("Digite o cpf do morador que deseja remover: ").nextLine());
-                System.out.println("\nOs dados atualizados do imovél é: " + imovel);
+                System.out.println("\nOs dados atualizados do imovél são: " + imovel);
 
             } else if(opcaoSelecionada == 4){
                 //sair
@@ -145,8 +143,6 @@ public class Sistema {
             }
 
         }
-
-
 
     }
 
