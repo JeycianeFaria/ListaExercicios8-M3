@@ -29,16 +29,16 @@ public class Imobiliaria {
         return catalogoImoveis;
     }
 
-    public void setCatalogoImoveis(List<Imovel> catalogoImoveis) {
-        this.catalogoImoveis = catalogoImoveis;
-    }
-
 
     //Métodos
+    public void adicionarImoveis(Imovel imovel){
+        catalogoImoveis.add(imovel);
+    }
+
     @Override
     public String toString() {
         StringBuilder exibir = new StringBuilder();
-        exibir.append("\n======" + nomeImobiliaria + "======");
+        exibir.append("\n======" + nomeImobiliaria + "======\n");
         exibir.append("\n======Catálogo======" + catalogoImoveis);
         return exibir.toString();
     }
