@@ -48,6 +48,21 @@ public class Sistema {
         return salario;
     }
 
+    public static String nomeMorador(){
+        String nomeMorador = capturarDados("Digite o nome do Morador: ").nextLine();
+        return nomeMorador;
+    }
+
+    public static String cpfMorador(){
+        String cpfMorador = capturarDados("Digite o cpf do Morador: ").nextLine();
+        return cpfMorador;
+    }
+
+    public static double rendaMensalMorador(){
+        double rendaMensal = capturarDados("Digite a renda mensal do Morador: ").nextInt();
+        return rendaMensal;
+    }
+
 
     public static void executar(){
 
