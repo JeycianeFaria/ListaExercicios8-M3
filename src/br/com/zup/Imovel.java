@@ -91,12 +91,12 @@ public class Imovel {
     public void adicionarMorador(Morador morador) {
 
         if (verificaCpfMorador(morador)) {
-            System.out.println("Morador com este cpf já cadastrado.Digite novamente!");
+            System.out.println("\nMorador com este cpf já cadastrado.Digite novamente!");
         } else if (!verificarEmailMorador(morador)) {
-            System.out.println("Email digitado inválido ou já cadastrado.Digite novamente!");
+            System.out.println("\nEmail digitado inválido ou já cadastrado.Digite novamente!");
         } else {
             moradores.add(morador);
-            System.out.println("Morador adicionado com sucesso!");
+            System.out.println("\nMorador adicionado com sucesso!");
         }
 
     }
@@ -112,7 +112,7 @@ public class Imovel {
         }
 
         moradores.remove(moradorARemover);
-        System.out.println("Morador removido com sucesso!");
+        System.out.println("\nMorador removido com sucesso!");
 
     }
 

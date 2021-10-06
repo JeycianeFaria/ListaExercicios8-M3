@@ -29,6 +29,7 @@ public class Imobiliaria {
     //Métodos
     public void adicionarImoveis(Imovel imovel){
         catalogoImoveis.add(imovel);
+        System.out.println("\nImovél cadastrado com sucesso e adicionado ao catálogo!");
     }
 
     public List<Imovel> exibirImoveis(){
